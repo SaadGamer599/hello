@@ -3,11 +3,11 @@ if(!client) var client = new Discord.Client();
 if(!prefix) var prefix = ".";
 
 const adminprefix = ".";
-const devs = ['502800848116645889'];
+const devs = ['454441083758182400'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
-if (message.content.startsWith(adminprefix + 'play')) {
+if (message.content.startsWith(adminprefix + 'ply')) {
   client.user.setGame(argresult)
     message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
 } else 
